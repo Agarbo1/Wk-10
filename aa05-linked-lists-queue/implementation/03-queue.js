@@ -1,4 +1,4 @@
-const { SinglyLinkedNode } = require("./01-singly-linked-list");
+const { SinglyLinkedNode, SinglyLinkedList } = require("./01-singly-linked-list");
 
 class Queue {
 
@@ -9,9 +9,10 @@ class Queue {
     }
 
     enqueue(val) {
+        const node = new SinglyLinkedNode(val)
         // Add node to end of queue (linked list)
 
-        // Your code here 
+        // Your code here
 
         // Write your hypothesis on the time complexity of this method here
     }
@@ -19,7 +20,7 @@ class Queue {
     dequeue() {
         // Remove node from front of queue (linked list)
 
-        // Your code here 
+        // Your code here
 
         // Write your hypothesis on the time complexity of this method here
     }

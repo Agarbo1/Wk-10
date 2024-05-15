@@ -30,16 +30,28 @@ class SinglyLinkedList {
     }
 
     listLength() {
+        // O(n)
+        let length = 1;
+        if (this.head === null) {
+            return 0;
+        } else {
+            let curr = this.head;
+            while (curr.next) {
+                length++;
+                curr = curr.next;
+            }
+        }
+
         // Returns the length of the list
         // Implement in O(n) and in O(1) time complexity
 
-        // Your code here 
+        // Your code here
     }
 
     sumOfNodes() {
         // Returns the sum of the values of all the nodes
 
-        // Your code here 
+        // Your code here
 
         // Write your hypothesis on the time complexity of this method here
     }
@@ -47,7 +59,7 @@ class SinglyLinkedList {
     averageValue() {
         // Returns the average value of all the nodes
 
-        // Your code here 
+        // Your code here
 
         // Write your hypothesis on the time complexity of this method here
     }
@@ -55,7 +67,7 @@ class SinglyLinkedList {
     findNthNode(n) {
         // Returns the node at the nth index from the head
 
-        // Your code here 
+        // Your code here
 
         // Write your hypothesis on the time complexity of this method here
     }
@@ -65,7 +77,7 @@ class SinglyLinkedList {
         // Implement this as a singly linked list then as a doubly linked list
             // How do the implementation for singly and doubly vary if at all?
 
-        // Your code here 
+        // Your code here
 
         // Write your hypothesis on the time complexity of this method here
     }
@@ -77,7 +89,7 @@ class SinglyLinkedList {
         // the original linked list reversed in place
             // Does the time complexity change? How about space complexity?
 
-        // Your code here 
+        // Your code here
 
         // Write your hypothesis on the time complexity of this method here
     }
@@ -85,7 +97,7 @@ class SinglyLinkedList {
     reverseInPlace() {
         // Reverses the linked list in-place
 
-        // Your code here 
+        // Your code here
 
         // Write your hypothesis on the time complexity of this method here
     }
@@ -127,15 +139,15 @@ class DoublyLinkedList {
         // Implement this as a singly linked list then as a doubly linked list
             // How do the implementation for singly and doubly vary if at all?
 
-        // Your code here 
-        
+        // Your code here
+
         // Write your hypothesis on the time complexity of this method here
     }
 
     reverse() {
         // Returns a new reversed version of the linked list
 
-        // Your code here 
+        // Your code here
 
         // Write your hypothesis on the time complexity of this method here
     }
@@ -143,7 +155,7 @@ class DoublyLinkedList {
     reverseInPlace() {
         // Reverses the linked list in-place
 
-        // Your code here 
+        // Your code here
 
         // Write your hypothesis on the time complexity of this method here
     }

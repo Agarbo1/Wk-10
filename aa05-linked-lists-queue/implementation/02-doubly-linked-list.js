@@ -82,6 +82,7 @@ class DoublyLinkedList {
     if (this.isEmpty()) return undefined;
     return this.tail.value;
   }
+
 }
 
 module.exports = {
