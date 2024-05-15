@@ -1,4 +1,3 @@
-// Node class is implemented for you, no need to look for bugs here!
 class SinglyLinkedNode {
   constructor(val) {
     this.value = val;
@@ -26,9 +25,6 @@ class SinglyLinkedList {
   }
 
   addToTail(val) {
-    // There are bugs in this method! Fix them!!!
-
-    // Add node of val to tail of linked list
     let newNode = new SinglyLinkedNode(val);
     this.length++;
 
@@ -43,8 +39,6 @@ class SinglyLinkedList {
     }
     curr.next = newNode;
     return this;
-
-    // Write your hypothesis on the time complexity of this method here
   }
 
   removeFromHead() {
@@ -86,10 +80,6 @@ class SinglyLinkedList {
   peekAtHead() {
     if (this.head === null) return undefined;
     return this.head.value;
-
-    // Your code here
-
-    // Write your hypothesis on the time complexity of this method here
   }
 
   print() {
@@ -100,10 +90,6 @@ class SinglyLinkedList {
       curr = curr.next;
     }
   }
-
-  // Your code here
-
-  // Write your hypothesis on the time complexity of this method here
 }
 
 module.exports = {
