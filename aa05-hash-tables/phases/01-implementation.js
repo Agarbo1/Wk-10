@@ -31,6 +31,9 @@ class HashTable { // get O(1), Array O(1), deleteKey O(1)
 
 
   insert(key, value) {
+    if ((this.count / this.capacity) >= 0.8) {
+      this.resize()
+    }
     const index = this.hashMod(key);
     let curr = this.data[index];
     while (curr && curr.key !== key) {
@@ -77,11 +80,27 @@ class HashTable { // get O(1), Array O(1), deleteKey O(1)
         curr = curr.next
       }
     }
+
   }
 
-
   delete(key) {
-    
+    let hashIndex = this.hashMod(key);
+    let curr = this.data[hashIndex];
+    let prev = null;
+    while (curr) {
+      if (curr.key === key) {
+        if (prev === null) {
+          this.data[hashIndex] = curr.next;
+        } else {
+          prev.next = curr.next;
+        }
+        this.count--;
+        return;
+      }
+      prev = curr;
+      curr = curr.next;
+    }
+    return "Key not found";
   }
 }
 
